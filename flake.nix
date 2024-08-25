@@ -14,22 +14,7 @@
   };
 
   outputs = { ... }@inputs: {
-    nixosConfigurations = (inputs.dashNix.dashNixLib.build_systems [
-      "marmo"
-      "overheating"
-      "spaceship"
-    ] ./.) // {
-      server = inputs.stable.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          pkgs = inputs.dashNix.stablePkgs;
-        };
-        modules = [
-          inputs.dashNix.dashNixInputs.sops-nix.nixosModules.sops
-          inputs.dashNix.dashNixInputs.dashvim.nixosModules.dashvim
-          ./hardware/server/configuration.nix
-        ];
-      };
-    };
+    nixosConfigurations =
+      (inputs.dashNix.dashNixLib.build_systems [ "nixos" ] ./.);
   };
 }
