@@ -7,7 +7,6 @@
   };
   # modules
   mods = {
-    hyprland.use_default_config = false;
     coding.enable = false;
     flatpak.enable = false;
     printing.enable = false;
