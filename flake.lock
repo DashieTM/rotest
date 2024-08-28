@@ -239,11 +239,11 @@
         "stylix": "stylix"
       },
       "locked": {
-        "lastModified": 1724609525,
-        "narHash": "sha256-kaMktEvUdHxjOFKWxSMDvdfCO84o7i/3maqu8sXnWto=",
+        "lastModified": 1724875486,
+        "narHash": "sha256-PocDZE3HpbdnzoXuRMQ7ndaHw5eHDDHpcXyi+ZLD/dA=",
         "owner": "DashieTM",
         "repo": "DashNix",
-        "rev": "5d5abbc1a8f84b8a2b26e4eb44841a4d7246e845",
+        "rev": "4cd9e462d8a02a68ed30f65e8b9916c54b81482c",
         "type": "github"
       },
       "original": {
