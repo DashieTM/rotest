@@ -1,10 +1,12 @@
 {
   conf = {
-    monitor = "DP-2";
     username = "dashie";
     # the name of your system
     hostname = "nixos";
     timezone = "Europe/Bucharest";
+    defaultMonitor = "DP-2";
+    defaultMonitorMode = "3440x1440@144";
+    defaultMonitorScale = "1";
   };
   # modules
   mods = {
@@ -45,19 +47,10 @@
     sops.enable = false;
     nextcloud.enable = false;
     hyprland.monitor = [
-      # default
-      # TODO change this to your resolution
       "DP-2,3440x1440@144,0x0,1"
-      # all others
       ",highrr,auto,1"
     ];
-    # or amd, whatever you have
     gpu.nvidia.enable = true;
-    kde_connect.enable = true;
-    # TODO change this to your main resolution
-    # -> this will be your login manager
-    greetd = {
-      resolution = "3440x1440@144";
-    };
+    kdeConnect.enable = true;
   };
 }
