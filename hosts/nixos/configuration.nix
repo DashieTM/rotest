@@ -1,8 +1,7 @@
 {
   conf = {
-    username = "dashie";
+    username = "lancelot";
     # the name of your system
-    hostname = "nixos";
     timezone = "Europe/Bucharest";
     defaultMonitor = "DP-2";
     defaultMonitorMode = "3440x1440@144";
