@@ -1,16 +1,13 @@
 {
   conf = {
     username = "lancelot";
+    gpu = "amd";
     # the name of your system
     timezone = "Europe/Bucharest";
-    defaultMonitor = "DP-2";
-    defaultMonitorMode = "3440x1440@144";
-    defaultMonitorScale = "1";
   };
   # modules
   mods = {
     coding.enable = false;
-    flatpak.enable = false;
     printing.enable = false;
     keepassxc.enable = false;
     drives = {
@@ -45,10 +42,15 @@
     };
     sops.enable = false;
     nextcloud.enable = false;
-    hyprland.monitor = [
-      "DP-2,3440x1440@144,0x0,1"
-      ",highrr,auto,1"
-    ];
+    hypr.hyprland = {
+      defaultMonitor = "DP-2";
+      defaultMonitorMode = "3440x1440@144";
+      defaultMonitorScale = "1";
+      monitor = [
+        "DP-2,3440x1440@144,0x0,1"
+        ",highrr,auto,1"
+      ];
+    };
     gpu.nvidia.enable = true;
     kdeConnect.enable = true;
   };

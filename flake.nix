@@ -3,13 +3,11 @@
 
   inputs = {
     dashNix = {
-      url = "github:DashieTM/DashNix";
+      url = "github:Xetibo/DashNix";
     };
   };
 
-  outputs =
-    { ... }@inputs:
-    {
-      nixosConfigurations = inputs.dashNix.dashNixLib.build_systems { root = ./.; };
-    };
+  outputs = {...} @ inputs: {
+    nixosConfigurations = inputs.dashNix.dashNixLib.buildSystems {root = ./.;};
+  };
 }
